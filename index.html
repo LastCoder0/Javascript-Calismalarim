@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>JavaScript</head>
+    <title>ornek1</title>
+    <meta charset="utf-8">
+    <script src="index.js"></script>
+    <body>
+
+<h2>My First JavaScript</h2>
+
+<div>
+<button type="button" onclick="document.getElementById('demo').innerHTML=Date()">
+Anlık Saati Gösteriyor
+</button>
+<button type="button" onclick='document.getElementById("degistir").innerHTML = "Tıkladım bile"'>Tıkla</button>
+
+<button type="button" onclick="document.getElementById('degistir').style.fontSize='35px'">Büyüüüt</button>
+
+<button type="button" onclick="document.getElementById('ornek').style.fontSize='50px'">Kücült</button>
+<button type="button" onclick="document.getElementById('ornek').style.display='none'">Örnegi Gizle </button>
+<button type="button" onclick="document.getElementById('ornek').style.display='unset'">Örnegi Göster</button>
+<button type="button" onclick="document.getElementById('gizlibilgi').style.display='block'">Gizli bir bilgiyi göster</button>
+
+
+<p id="demo"></p>
+<p id="degistir">Banaaa tıklamaaa</p>
+<p id="ornek">Büyügüm</p>
+<p id="gizlibilgi" style="display: none;">Bu bir gizli bilgidir lütfen girmeyiniz....</p>
+<h5 id="degeriki"></h5>
+<h4 id="deger"></h4><button type="button" onclick="ilkFunction()">İki degeride getiriyor.</button>
+<br>
+
+<label id="sayi">Deger </label>
+
+<script>document.getElementById("sayi").innerHTML=19+96;
+document.write(5+10);
+//window.alert("Cihat sen napiyon haci?");
+console.log(5,6);
+</script>
+<br>
+<button type="button" onclick="window.print()">Ekran Çıktısı almak için</button>
+<br>
+<p id="sonucyazdir" onclick="ikinciFunction()">Buraya sonuc gelcek</p>
+<h2 id="bilgi"></h2>
+<p id="functions"></p>
+<p id="nesne"></p>
+<h4 id="func"></h4>
+<button onclick="this.innerHTML=Date()">Saat Kaç?</button>
+<button onclick="displayDate()">Time</button>
+<br>
+<br>
+<button type="button" onmouseover="yazdir()" onmouseout="sil()">Buraya Gelme</button>
+<h1 id="yazdir"></h1>
+Uzunlugu:<p id="uzun"></p>
+<p id="neBu"></p>
+</div>
+<script>
+    var welcome={
+        isim: "Cihat",
+        soyisim: "Can",
+        Yasiniz:25
+    };
+    function yazdir()
+    {
+        document.getElementById("yazdir").innerHTML="Hoşgeldiniz Sayin"+welcome.isim+" "+welcome.soyisim+" yasiniz "+welcome.Yasiniz;
+    }
+    function sil()
+    {
+        document.getElementById("yazdir").innerHTML="Bu veri siliniyor...";
+    }
+    var pi=3.14;
+    var xx="Cihat";
+    var y=new String("alili");
+
+    document.getElementById("neBu").innerHTML =
+typeof xx + "<br>" + typeof y;
+    var uzunlukne="Cihat hosgeldin aramıza";
+    document.getElementById("uzun").innerHTML=uzunlukne.length;
+    var person="Cihat Can";
+    var answer="Hoşgeldinz";
+    document.getElementById("bilgi").innerHTML=pi+"<br>"+person+"<br>"+answer;
+    var x={FirstName:"Cio",lastName:"Baba"}; //Obje türünden bi deger
+    var cars=["Reno","doblo","bmw"];
+     function carp(p1,p2)
+     {
+         return p1*p2;
+     }
+     document.getElementById("functions").innerHTML=carp(9,7);
+     var kamyon={type:"Scania",model:"2010",color:"beyaaz"};
+     document.getElementById("nesne").innerHTML=
+     kamyon.type+ " "+kamyon["model"]+" "+ kamyon.color;
+     var person={
+            FirstName:"Cihat",
+            lastName:"Can",
+            id: 488,
+            fullName :function()
+            {
+                return this.FirstName+ " "+ this.lastName+" numarasi "+this.id;
+            }
+     };
+     document.getElementById("func").innerHTML=person.fullName();
+     var x=new String();
+     function displayDate()
+     {
+        this.innerHTML=Date();
+     }
+</script>
+</body>
+</html> 
